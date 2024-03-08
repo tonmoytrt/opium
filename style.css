@@ -1,0 +1,343 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&display=swap');
+@font-face {
+    font-family: AncientRunes;
+    src: url(AncientRunes.ttf);
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+*{
+    box-sizing: border-box;
+}
+audio{
+    display: none;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-shadow: #000 -2px 2px 2px;
+    text-align: center;
+    font-family: 'Autour One', sans-serif;
+    background: #0e0f11;
+    color: white;
+}
+.clear{
+    clear: both;
+}
+.italic{
+    font-style: italic;
+}
+em, .title{
+    font-family: 'AncientRunes', sans-serif;
+    font-size: 4rem;
+    vertical-align: -5px;
+    opacity: 80%;
+}
+.wrapper{
+    position: relative;
+    width: 64rem;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow: hidden;
+    background: rgba(0,0,0,0.05);
+}
+.enter{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #0e0f11;
+    z-index: 500;
+    padding-top: 40vh;
+    top: -100vh;
+    transition: top 500ms linear;
+}
+.enter.visible{
+    top: 0;
+}
+.enter a{
+    height: 100%;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    color: white;
+    transition: text-decoration 200ms linear;
+}
+.enter a:hover{
+    text-decoration: underline;
+}
+main{
+    background: url(images/bg.png) no-repeat center;
+    background-size: cover;
+}
+.bird{
+    width: 50rem;
+    position: absolute;
+    bottom: 0;
+    z-index: 400;
+    mix-blend-mode: luminosity;
+    animation: shine 9050ms infinite linear;
+}
+.bird.hide{
+    display: none;
+}
+.bird.left{
+    left: 0;
+}
+.bird.right{
+    right: 0;
+}
+a.mute{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url(images/speaker.png) no-repeat;
+    background-size: contain;
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    margin-left: 1rem;
+    z-index: 400;
+}
+a.mute.muted{
+    background: url(images/speakerMute.png) no-repeat;
+    background-size: contain;
+}
+.content{
+    padding-top: 8rem;
+    overflow-y: auto;
+    height: 100%;
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
+h1.title{
+    opacity: 100%;
+    font-size: 14rem;
+    margin: 5rem;
+}
+h2.title{
+    font-size: 8rem;
+    margin: 6rem 0;
+}
+.logo{
+    width: 30rem;
+    mix-blend-mode: luminosity;
+    border-radius: 100%;
+}
+.logo.hide{
+    display: none;
+}
+.ca{
+    text-transform: uppercase;
+}
+.taxes{
+    float: left;
+    width: 50%;
+    margin: 4rem 0;
+    text-align: center;
+    font-size: 5rem;
+    line-height: 5rem;
+}
+.taxes span{
+    display: block;
+    font-family: 'AncientRunes', sans-serif;
+    font-size: 8rem;
+}
+.lore{
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+    margin-bottom: 2rem;
+    clear: both;
+}
+.socials{
+    margin: 8rem 0 4rem 0;
+}
+.socials ul{
+    mix-blend-mode: plus-lighter;
+    opacity: 80%;
+}
+.socials a{
+    font-size: 4rem;
+    text-decoration: none;
+}
+.socials li{
+    display: inline-block;
+    width: calc(100% / 6 - 10px);
+    text-align: center;
+}
+.socials img{
+    width: 80%;
+}
+
+.toke{
+    display: flex;
+    align-content: center;
+    background: rgba(255,255,255,0.2);
+    border: 2px solid white;
+    padding-left: 2rem;
+    margin: 3rem 0;
+    align-items: center;
+    text-transform: uppercase;
+}
+.toke span{
+    display: flex;
+    padding: 2rem;
+    margin-left: 1rem;
+    border-left: 2px solid white;
+    width: 100%;
+    background: white;
+    color: #0c160f;
+    mix-blend-mode: overlay;
+}
+.roadmap img{
+    width: 10rem;
+}
+.roadmap li{
+    margin: 3rem 0;
+    position: relative;
+}
+.roadmap li:after{
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 10.5rem;
+    position: absolute;
+    left: calc(50% - 0.25rem);
+    bottom: -3rem;
+    background: white;
+    mix-blend-mode: overlay;
+}
+.roadmap li:last-child:after{
+    display: none;
+}
+.roadmap h3{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 1rem;
+}
+video{
+    margin-bottom: 3rem;
+}
+.disclaimer{
+    font-size: 1.2rem;
+    opacity: 80%;
+    margin-bottom: 3rem;
+}
+.copyright{
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.4rem;
+}
+/*******************************************************************/
+/*******************************************************************/
+/***************************ANIMATIONS******************************/
+/*******************************************************************/
+/*******************************************************************/
+
+@keyframes pulse {
+    0% {
+        transform: translateY(0) rotate(13deg);
+    }
+    
+    100% {
+        transform: translateY(-1rem) rotate(13deg);
+    }
+}
+
+@keyframes shine {
+    0% {
+        mix-blend-mode: plus-lighter;
+    }
+
+    3%{
+        mix-blend-mode: luminosity;
+    }
+    
+    100% {
+        mix-blend-mode: luminosity;
+    }
+}
+/*******************************************************************/
+/*******************************************************************/
+/***************************RESPONSIVE******************************/
+/*******************************************************************/
+/*******************************************************************/
+
+@media (max-width: 1024px){
+    body .wrapper{
+        width: 100%;
+    }
+
+    body .bird{
+        width: 20rem;
+    }
+
+    body .bird.left{
+        left: -11rem;
+    }
+
+    body .bird.right{
+        right: -11rem;
+    }
+    body h1.title{
+        font-size: 11rem;
+        line-height: 8rem;
+    }
+
+    body a.mute{
+        left: 1rem;
+        margin-left: 0;
+    }
+    body .ca{
+        font-size: 1rem;
+    }
+}
